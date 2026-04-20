@@ -1,24 +1,59 @@
-
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
-  <title>正向黑先</title>
-  <link rel="stylesheet" href="othello-style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>混合刷題網站</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div id="start-screen">
-    <h1>正向黑先</h1>
-    <button onclick="startGame('player')">玩家先手</button>
-    <button onclick="startGame('ai')">AI 先手</button>
+  <noscript><div style="padding:16px;color:white;background:#7f1d1d">這個檔案需要 JavaScript。若在 ChatGPT 內預覽看不到題目，請下載後用 Safari、Chrome 或 Edge 開啟。</div></noscript>
+<div class="wrap">
+    <div style="margin-bottom:12px;padding:12px 14px;border:1px solid #334155;border-radius:14px;background:#0b1220;color:#cbd5e1;">若在 ChatGPT 內預覽沒有顯示題目，這通常是因為預覽不執行 JavaScript。請下載後用瀏覽器開啟。</div>
+  <div class="topbar">
+    <h1>混合刷題網站</h1>
+    <div class="muted">內含：演算法 25 題、Python 第 02 章 18 題、全華第 03–04 章 20 題。答錯會立刻顯示正解與解析。</div>
+    <div class="stats">
+      <div class="stat"><div class="muted">題庫總數</div><div id="totalCount">0</div></div>
+      <div class="stat"><div class="muted">目前進度</div><div id="progressText">0 / 0</div></div>
+      <div class="stat"><div class="muted">答對</div><div id="correctCount">0</div></div>
+      <div class="stat"><div class="muted">答錯</div><div id="wrongCount">0</div></div>
+      <div class="stat"><div class="muted">正確率</div><div id="accuracy">0%</div></div>
+    </div>
+    <div class="progress"><div id="bar"></div></div>
+    <div class="controls">
+      <button id="restartBtn">重新洗牌重刷</button>
+      <button id="wrongModeBtn" class="secondary">只刷錯題</button>
+      <button id="allModeBtn" class="ghost">刷全部題目</button>
+    </div>
   </div>
-  <div id="game-screen" style="display:none;">
-    <h2>正向黑先</h2>
-    <p>玩家分數：<span id="player-score">2</span> | AI 分數：<span id="ai-score">2</span></p>
-    <canvas id="board" width="480" height="480"></canvas>
-    <p id="status">遊戲開始！</p>
-    <button onclick="undoMove()">悔棋</button>
+
+  <div class="card" id="quizCard">
+    <div class="meta">
+      <span class="pill" id="qid">題號</span>
+      <span class="pill" id="qcat">分類</span>
+    </div>
+    <div class="qtext" id="qtext"></div>
+    <div class="code" id="qcode" style="display:none"></div>
+    <div class="options" id="options"></div>
+    <div class="feedback" id="feedback"></div>
+    <div class="footer">
+      <button id="prevBtn" class="ghost">上一題</button>
+      <button id="nextBtn" class="secondary" disabled>下一題</button>
+    </div>
   </div>
-  <script src="othello-hell-ai.js"></script>
+
+  <div class="summary" id="summaryBox">
+    <h2>本輪結果</h2>
+    <div id="summaryText"></div>
+    <div class="controls" style="margin-top:12px">
+      <button id="retryWrongBtn">重刷錯題</button>
+      <button id="retryAllBtn" class="secondary">重刷全部</button>
+    </div>
+    <div class="list" id="wrongList"></div>
+  </div>
+</div>
+
+<script src="questions.js"></script>
 </body>
 </html>
