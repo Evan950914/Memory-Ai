@@ -9,7 +9,7 @@
       --border: #334155;
       --btn: #0b5fff;
     }
-    * { bbox-sizing: border-box; }
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
