@@ -295,5 +295,5 @@ document.getElementById('wrongModeBtn').onclick = () => { mode = 'wrong'; resetP
 document.getElementById('allModeBtn').onclick = () => { mode = 'all'; resetPool(); };
 document.getElementById('retryWrongBtn').onclick = () => { mode = 'wrong'; resetPool(); };
 document.getElementById('retryAllBtn').onclick = () => { mode = 'all'; resetPool(); };
-
+console.log('題庫總數 =', questionBank.length);
 resetPool();
