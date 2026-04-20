@@ -7,53 +7,83 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <noscript><div style="padding:16px;color:white;background:#7f1d1d">你好啊 </div></noscript>
-<div class="wrap">
-    <div style="margin-bottom:12px;padding:12px 14px;border:1px solid #334155;border-radius:14px;background:#0b1220;color:#cbd5e1;">你好啊</div>
-  <div class="topbar">
-    <h1>混合刷題網站</h1>
-    <div class="muted">內含：演算法 25 題、Python 第 02 章 18 題、全華第 03–04 章 20 題。答錯會立刻顯示正解與解析。</div>
-    <div class="stats">
-      <div class="stat"><div class="muted">題庫總數</div><div id="totalCount">0</div></div>
-      <div class="stat"><div class="muted">目前進度</div><div id="progressText">0 / 0</div></div>
-      <div class="stat"><div class="muted">答對</div><div id="correctCount">0</div></div>
-      <div class="stat"><div class="muted">答錯</div><div id="wrongCount">0</div></div>
-      <div class="stat"><div class="muted">正確率</div><div id="accuracy">0%</div></div>
+  <noscript>
+    <div style="padding:16px;color:white;background:#7f1d1d">
+      這個網站需要 JavaScript 才能正常運作。
     </div>
-    <div class="progress"><div id="bar"></div></div>
-    <div class="controls">
-      <button id="restartBtn">重新洗牌重刷</button>
-      <button id="wrongModeBtn" class="secondary">只刷錯題</button>
-      <button id="allModeBtn" class="ghost">刷全部題目</button>
+  </noscript>
+
+  <div class="wrap">
+    <div class="topbar">
+      <h1>混合刷題網站</h1>
+      <div class="muted">
+        內含：演算法、Python、第03–04章、堆疊與佇列等混合題庫。答錯會立刻顯示正解與解析。
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <div class="muted">題庫總數</div>
+          <div id="totalCount">0</div>
+        </div>
+        <div class="stat">
+          <div class="muted">目前進度</div>
+          <div id="progressText">0 / 0</div>
+        </div>
+        <div class="stat">
+          <div class="muted">答對</div>
+          <div id="correctCount">0</div>
+        </div>
+        <div class="stat">
+          <div class="muted">答錯</div>
+          <div id="wrongCount">0</div>
+        </div>
+        <div class="stat">
+          <div class="muted">正確率</div>
+          <div id="accuracy">0%</div>
+        </div>
+      </div>
+
+      <div class="progress">
+        <div id="bar"></div>
+      </div>
+
+      <div class="controls">
+        <button id="restartBtn">重新洗牌重刷</button>
+        <button id="wrongModeBtn" class="secondary">只刷錯題</button>
+        <button id="allModeBtn" class="ghost">刷全部題目</button>
+      </div>
+    </div>
+
+    <div class="card" id="quizCard">
+      <div class="meta">
+        <span class="pill" id="qid">題號</span>
+        <span class="pill" id="qcat">分類</span>
+      </div>
+
+      <div class="qtext" id="qtext"></div>
+      <div class="code" id="qcode" style="display:none"></div>
+      <div class="options" id="options"></div>
+      <div class="feedback" id="feedback"></div>
+
+      <div class="footer">
+        <button id="prevBtn" class="ghost">上一題</button>
+        <button id="nextBtn" class="secondary" disabled>下一題</button>
+      </div>
+    </div>
+
+    <div class="summary" id="summaryBox">
+      <h2>本輪結果</h2>
+      <div id="summaryText"></div>
+
+      <div class="controls" style="margin-top:12px">
+        <button id="retryWrongBtn">重刷錯題</button>
+        <button id="retryAllBtn" class="secondary">重刷全部</button>
+      </div>
+
+      <div class="list" id="wrongList"></div>
     </div>
   </div>
 
-  <div class="card" id="quizCard">
-    <div class="meta">
-      <span class="pill" id="qid">題號</span>
-      <span class="pill" id="qcat">分類</span>
-    </div>
-    <div class="qtext" id="qtext"></div>
-    <div class="code" id="qcode" style="display:none"></div>
-    <div class="options" id="options"></div>
-    <div class="feedback" id="feedback"></div>
-    <div class="footer">
-      <button id="prevBtn" class="ghost">上一題</button>
-      <button id="nextBtn" class="secondary" disabled>下一題</button>
-    </div>
-  </div>
-
-  <div class="summary" id="summaryBox">
-    <h2>本輪結果</h2>
-    <div id="summaryText"></div>
-    <div class="controls" style="margin-top:12px">
-      <button id="retryWrongBtn">重刷錯題</button>
-      <button id="retryAllBtn" class="secondary">重刷全部</button>
-    </div>
-    <div class="list" id="wrongList"></div>
-  </div>
-</div>
-
-<script src="questions.js"></script>
+  <script src="questions.js"></script>
 </body>
 </html>
