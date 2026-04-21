@@ -122,142 +122,25 @@ const questionBank = [
   {id:'ADD-48', cat:'堆疊佇列 加題', text:'下列哪一種資料結構適合處理「後進先出」(Last-in-First-out) 的資料？', options:['佇列(Queue)', '堆疊(Stack)', '雜湊(Hash)', '堆積(Heap)'], answer:1, exp:'後進先出就是 LIFO，對應 Stack。'},
   {id:'ADD-49', cat:'堆疊佇列 加題', text:'如果有多人同時使用印表機，此時先送出資料的使用者會先印出來，可以猜測印表機的緩衝區使用以下哪一種資料結構？', options:['堆疊(Stack)', '堆積(Heap)', '雜湊(Hash)', '佇列(Queue)'], answer:3, exp:'先送先印，符合 Queue 的 FIFO。'},
   {id:'ADD-50', cat:'堆疊佇列 加題', text:'後序表示式【36 10 5 3 / 6 - * + 3 5 3 / * +】的計算結果為？', options:['53', '-11', '-8', '-12'], answer:1, exp:'依後序表示式用堆疊逐步計算，最後結果為 -11。'},
-  {
-    id: "ch4_new_01",
-    cat: "第05章 加題",
-    text: "在呼叫副程式時，可以 Stack 用來存放其中的一些資訊，何者不是",
-    options: ["區域變數", "參數值", "呼叫時的位置", "副程式名稱"],
-    answer: 3,
-    exp: "Stack 常存放區域變數、參數值、返回位址等資訊，不會特別存放副程式名稱。"
-  },
-  {
-    id: "ch4_new_02",
-    cat: "第05章 加題",
-    text: "佇列的存取策略為",
-    options: ["Priority", "Random", "FILO", "FIFO"],
-    answer: 3,
-    exp: "Queue 的特性是 First In First Out，也就是 FIFO。"
-  },
-  {
-    id: "ch4_new_03",
-    cat: "第05章 加題",
-    text: "後序表示式【36 10 5 3 / 6 - * + 3 5 3 / * +】的計算結果為",
-    options: ["53", "-8", "-11", "-12"],
-    answer: 2,
-    exp: "以整數除法計算：5/3=1，(1-6)=-5，10*(-5)=-50，36+(-50)=-14；5/3=1，3*1=3；最後 -14+3=-11。"
-  },
-  {
-    id: "ch4_new_04",
-    cat: "第05章 加題",
-    text: "捷運系統旅客依序搭乘手扶梯進出站，屬於以下哪一種資料結構？",
-    options: ["堆積(Heap)", "雜湊(Hash)", "堆疊(Stack)", "佇列(Queue)"],
-    answer: 3,
-    exp: "先進先出，屬於 Queue。"
-  },
-  {
-    id: "ch4_new_05",
-    cat: "第05章 加題",
-    text: "下列哪一種資料結構適合處理「後進先出」(Last-in-First-out) 的資料？",
-    options: ["堆疊(Stack)", "堆積(Heap)", "佇列(Queue)", "雜湊(Hash)"],
-    answer: 0,
-    exp: "LIFO 對應 Stack。"
-  },
-  {
-    id: "ch4_new_06",
-    cat: "第05章 加題",
-    text: "若將 1、2、3、4 依序放入 Stack，則哪一種輸出是不可能的",
-    options: ["1234", "1423", "3214", "2134"],
-    answer: 1,
-    exp: "1423 無法由合法的 push / pop 順序產生。"
-  },
-  {
-    id: "ch4_new_07",
-    cat: "第05章 加題",
-    text: "後序表示式【10 8 + 6 5 * -】的計算結果為",
-    options: ["53", "-8", "-11", "-12"],
-    answer: 3,
-    exp: "10+8=18，6*5=30，18-30=-12。"
-  },
-  {
-    id: "ch4_new_08",
-    cat: "第05章 加題",
-    text: "若將 1、2、3 依序放入 Stack，則哪一種輸出是不可能的",
-    options: ["132", "312", "213", "231"],
-    answer: 1,
-    exp: "312 不可能。若 3 先出來，表示 1、2 都還在 3 下面，下一個不可能直接變成 1。"
-  },
-  {
-    id: "ch4_new_09",
-    cat: "第05章 加題",
-    text: "中序表示式【A*負B/正C】的前序表示式為",
-    options: ["AB負C正/*", "/*A負B正C", "AB負*C正/", "*A/負B正C"],
-    answer: 1,
-    exp: "A*負B/正C = (A * (-B)) / (+C)，前序為 /*A負B正C。"
-  },
-  {
-    id: "ch4_new_10",
-    cat: "第05章 加題",
-    text: "中序表示式【A*B/C】的前序表示式為",
-    options: ["*A/BC", "/*ABC", "ABC/*", "AB*C/"],
-    answer: 1,
-    exp: "A*B/C = (A*B)/C，所以前序表示式為 /*ABC。"
-  },
-  {
-    id: "ch4_new_11",
-    cat: "第05章 加題",
-    text: "後序表示式【10 3 / 2 5 - * 8 9 * + 10 -】的計算結果為",
-    options: ["-12", "-11", "53", "-8"],
-    answer: 2,
-    exp: "10/3=3，2-5=-3，3*(-3)=-9，8*9=72，-9+72=63，63-10=53。"
-  },
-  {
-    id: "ch4_new_12",
-    cat: "第05章 加題",
-    text: "若 x=1; y=2; z=--x + --y; 則 (x,y,z) 最後的值為",
-    options: ["2,1,3", "0,3,2", "2,3,4", "0,1,1"],
-    answer: 3,
-    exp: "--x 先變成 0，--y 先變成 1，所以 z=0+1=1，結果為 (0,1,1)。"
-  },
-  {
-    id: "ch4_new_13",
-    cat: "第05章 加題",
-    text: "若想在 printf 中印出 10 進位的整數值，應該用",
-    options: ["%o", "%x", "%d", "%f"],
-    answer: 2,
-    exp: "%d 用來輸出十進位整數。"
-  },
-  {
-    id: "ch4_new_14",
-    cat: "第05章 加題",
-    text: "若 x=1; y=2; z=x++ + y--; 則 (x,y,z) 最後的值為",
-    options: ["0,1,1", "0,3,2", "2,3,4", "2,1,3"],
-    answer: 3,
-    exp: "x++ 先用 1 再變 2，y-- 先用 2 再變 1，所以 z=1+2=3，結果為 (2,1,3)。"
-  },
-  {
-    id: "ch4_new_15",
-    cat: "第05章 加題",
-    text: "若將 1、2、3、4 依序放入 Stack，則哪一種輸出是不可能的",
-    options: ["1243", "3421", "4321", "2413"],
-    answer: 3,
-    exp: "2413 不可能由合法的堆疊操作產生。"
-  },
-  {
-    id: "ch4_new_16",
-    cat: "第05章 加題",
-    text: "有一個堆疊(Stack)，經由【push A, push B, push C, pop, push D, pop, push E, pop, pop, pop】輸出結果為以下何者？",
-    options: ["CDEBA", "EDCBA", "BCADE", "ABCDE"],
-    answer: 0,
-    exp: "依序 pop 出來為 C、D、E、B、A，所以答案是 CDEBA。"
-  },
-  {
-    id: "ch4_new_17",
-    cat: "第05章 加題",
-    text: "後序表示式【5 3 / 1 4 - * 3 + 8 -】的計算結果為",
-    options: ["-8", "53", "-11", "-12"],
-    answer: 0,
-    exp: "5/3=1，1-4=-3，1*(-3)=-3，-3+3=0，0-8=-8。"
-  }
+
+  // ===== 第05章加題 =====
+  {id:'CH5-01', cat:'第05章 加題', text:'在呼叫副程式時，可以 Stack 用來存放其中的一些資訊，何者不是', options:['區域變數', '參數值', '呼叫時的位置', '副程式名稱'], answer:3, exp:'Stack 常存放區域變數、參數值、返回位址等資訊，不會特別存放副程式名稱。'},
+  {id:'CH5-02', cat:'第05章 加題', text:'佇列的存取策略為', options:['Priority', 'Random', 'FILO', 'FIFO'], answer:3, exp:'Queue 的特性是 First In First Out，也就是 FIFO。'},
+  {id:'CH5-03', cat:'第05章 加題', text:'後序表示式【36 10 5 3 / 6 - * + 3 5 3 / * +】的計算結果為', options:['53', '-8', '-11', '-12'], answer:2, exp:'以整數除法計算：5/3=1，(1-6)=-5，10*(-5)=-50，36+(-50)=-14；5/3=1，3*1=3；最後 -14+3=-11。'},
+  {id:'CH5-04', cat:'第05章 加題', text:'捷運系統旅客依序搭乘手扶梯進出站，屬於以下哪一種資料結構？', options:['堆積(Heap)', '雜湊(Hash)', '堆疊(Stack)', '佇列(Queue)'], answer:3, exp:'先進先出，屬於 Queue。'},
+  {id:'CH5-05', cat:'第05章 加題', text:'下列哪一種資料結構適合處理「後進先出」(Last-in-First-out) 的資料？', options:['堆疊(Stack)', '堆積(Heap)', '佇列(Queue)', '雜湊(Hash)'], answer:0, exp:'LIFO 對應 Stack。'},
+  {id:'CH5-06', cat:'第05章 加題', text:'若將 1、2、3、4 依序放入 Stack，則哪一種輸出是不可能的', options:['1234', '1423', '3214', '2134'], answer:1, exp:'1423 無法由合法的 push / pop 順序產生。'},
+  {id:'CH5-07', cat:'第05章 加題', text:'後序表示式【10 8 + 6 5 * -】的計算結果為', options:['53', '-8', '-11', '-12'], answer:3, exp:'10+8=18，6*5=30，18-30=-12。'},
+  {id:'CH5-08', cat:'第05章 加題', text:'若將 1、2、3 依序放入 Stack，則哪一種輸出是不可能的', options:['132', '312', '213', '231'], answer:1, exp:'312 不可能。若 3 先出來，表示 1、2 都還在 3 下面，下一個不可能直接變成 1。'},
+  {id:'CH5-09', cat:'第05章 加題', text:'中序表示式【A*負B/正C】的前序表示式為', options:['AB負C正/*', '/*A負B正C', 'AB負*C正/', '*A/負B正C'], answer:1, exp:'A*負B/正C = (A * (-B)) / (+C)，前序為 /*A負B正C。'},
+  {id:'CH5-10', cat:'第05章 加題', text:'中序表示式【A*B/C】的前序表示式為', options:['*A/BC', '/*ABC', 'ABC/*', 'AB*C/'], answer:1, exp:'A*B/C = (A*B)/C，所以前序表示式為 /*ABC。'},
+  {id:'CH5-11', cat:'第05章 加題', text:'後序表示式【10 3 / 2 5 - * 8 9 * + 10 -】的計算結果為', options:['-12', '-11', '53', '-8'], answer:2, exp:'10/3=3，2-5=-3，3*(-3)=-9，8*9=72，-9+72=63，63-10=53。'},
+  {id:'CH5-12', cat:'第05章 加題', text:'若 x=1; y=2; z=--x + --y; 則 (x,y,z) 最後的值為', options:['2,1,3', '0,3,2', '2,3,4', '0,1,1'], answer:3, exp:'--x 先變成 0，--y 先變成 1，所以 z=0+1=1，結果為 (0,1,1)。'},
+  {id:'CH5-13', cat:'第05章 加題', text:'若想在 printf 中印出 10 進位的整數值，應該用', options:['%o', '%x', '%d', '%f'], answer:2, exp:'%d 用來輸出十進位整數。'},
+  {id:'CH5-14', cat:'第05章 加題', text:'若 x=1; y=2; z=x++ + y--; 則 (x,y,z) 最後的值為', options:['0,1,1', '0,3,2', '2,3,4', '2,1,3'], answer:3, exp:'x++ 先用 1 再變 2，y-- 先用 2 再變 1，所以 z=1+2=3，結果為 (2,1,3)。'},
+  {id:'CH5-15', cat:'第05章 加題', text:'若將 1、2、3、4 依序放入 Stack，則哪一種輸出是不可能的', options:['1243', '3421', '4321', '2413'], answer:3, exp:'2413 不可能由合法的堆疊操作產生。'},
+  {id:'CH5-16', cat:'第05章 加題', text:'有一個堆疊(Stack)，經由【push A, push B, push C, pop, push D, pop, push E, pop, pop, pop】輸出結果為以下何者？', options:['CDEBA', 'EDCBA', 'BCADE', 'ABCDE'], answer:0, exp:'依序 pop 出來為 C、D、E、B、A，所以答案是 CDEBA。'},
+  {id:'CH5-17', cat:'第05章 加題', text:'後序表示式【5 3 / 1 4 - * 3 + 8 -】的計算結果為', options:['-8', '53', '-11', '-12'], answer:0, exp:'5/3=1，1-4=-3，1*(-3)=-3，-3+3=0，0-8=-8。'}
 ];
 
 let currentPool = [];
@@ -285,7 +168,7 @@ function resetPool() {
   wrong = 0;
   answeredMap = new Map();
   document.getElementById('summaryBox').classList.remove('show');
-  document.getElementById('quizCard').style.display = currentPool.length ? 'block' : 'block';
+  document.getElementById('quizCard').style.display = 'block';
   render();
 }
 
@@ -431,5 +314,6 @@ document.getElementById('wrongModeBtn').onclick = () => { mode = 'wrong'; resetP
 document.getElementById('allModeBtn').onclick = () => { mode = 'all'; resetPool(); };
 document.getElementById('retryWrongBtn').onclick = () => { mode = 'wrong'; resetPool(); };
 document.getElementById('retryAllBtn').onclick = () => { mode = 'all'; resetPool(); };
+
 console.log('題庫總數 =', questionBank.length);
 resetPool();
